@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="matchistik" />
+    <meta name="description" content="123" />
+    <meta name="keywords" content="213" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="2 days" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/cart.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Start HEADER -->
+    <header
+      class="header"
+      style="
+        background: url(./img/bg/header__bg.png) center center no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="header__menu">
+        <div class="container">
+          <div class="header__menu-list">
+            <ul>
+              <li class="menu__item ffOpenSansCond">
+                <a href="#">Теплица</a>
+              </li>
+              <li class="menu__item ffOpenSansCond">
+                <a href="#">ПОЖИЗННЕННАЯ ГАРАНТИЯ</a>
+                <!-- ПОЖИЗННЕННАЯ ГАРАНТИЯ -->
+              </li>
+              <li class="menu__item ffOpenSansCond">
+                <a href="#">ДОСТАВКА</a>
+                <!-- ДОСТАВКА -->
+              </li>
+              <li class="menu__item ffOpenSansCond">
+                <a href="#">СБОРКА</a>
+                <!-- СБОРКА -->
+              </li>
+              <li class="menu__item ffOpenSansCond">
+                <a href="#">ФУНДАМЕНТ</a>
+                <!-- ФУНДАМЕНТ -->
+              </li>
+              <li class="menu__item ffOpenSansCond">
+                <a href="#">КОНТАКТЫ</a>
+                <!-- КОНТАКТЫ -->
+              </li>
+            </ul>
+          </div>
+          <!-- END MENU LIST -->
+          <div class="header__menu-contacts ffOpenSansCond">
+            <a href="tel:88005559413">8 (800) 555 94 13</a>
+          </div>
+          <!-- END CONTACTS -->
+          <div class="header__menu-btn primary-btn ffOpenSansCond">
+            <button class="primary-btn" type="submit" id="header__btn">
+              <img src="./img/icon/phone__icon.png" alt="icon-phone" /> ЗАКАЗАТЬ
+              ОБРАТНЫЙ ЗВОНОК
+            </button>
+          </div>
+          <!-- END MENU BTN -->
+        </div>
+
+        <!-- END MENU CONTAINER -->
+      </div>
+      <!-- END MENU -->
+
+      <div class="container header__content">
+        <div class="header__content-top header__top">
+          <div class="header__top-text">
+            <h1 class="ffOpenSansCond">ГОСТ-ТЕПЛИЦА</h1>
+            <!-- ГОСТ-ТЕПЛИЦА -->
+
+            <p>надежные теплицы напрямую от завода - изготовителя</p>
+            <!-- надежные теплицы напрямую от завода - изготовителя -->
+          </div>
+          <!-- END HEADER TOP TEXT -->
+          <div class="header__top-city">
+            <p>Выберите город:</p>
+            <select name="city" id="city" size="1">
+              <option value="Нижний Новгород">Нижний Новгород</option>
+              <option value="Москва">Москва</option>
+              <option value="Тагил">Тагил</option>
+              <option value="Москва">Москва</option>
+            </select>
+          </div>
+          <!-- END HEADER TOP CITY -->
+
+          <div class="header__top-graphic">
+            <p>Ежедневно с 9:00 до 21:00.</p>
+            <p>Заказы принимаются круглосуточно!</p>
+          </div>
+        </div>
+        <!-- END header__content-top -->
+
+        <div class="header__content-bottom header__bottom ffOpenSansCond">
+          <div class="header__bottom-stock">
+            <div class="stock__text">
+              <h2>АКЦИЯ!</h2>
+              <div class="arrow">
+                <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+              </div>
+            </div>
+            <div class="stock__second">
+              <h4>ДАРИМ ВАМ</h4>
+              <h3>ПОДАРКИ!</h3>
+            </div>
+          </div>
+          <!-- END HEADER STOCK -->
+
+          <div class="header__bottom-text">
+            <p>Только <span>3 дня</span> подарки каждому покупателю!</p>
+            <div class="text__with-hr">
+              <div class="hr"></div>
+              <div class="text__box">
+                <h3>Дополнительная форточка</h3>
+                <p>при покупке от 20 000 руб. в подарок!</p>
+                <h3>Автомат для форточки</h3>
+                <p>при покупке от 20 000 руб. в подарок!</p>
+              </div>
+              <div class="text__img">
+                <img src="./img/icon/header__img.png" alt="image circle" />
+              </div>
+            </div>
+            <p><span>Спешите!</span> Количество подарков ограничено!</p>
+          </div>
+        </div>
+        <!-- END header__content-bottom -->
+      </div>
+    </header>
+    <!-- End HEADER -->
+
+    <!-- START Basket -->
+    <div class="basket" id="basket">
+      <a href="#">
+        <div class="basket__img">
+          <img src="./img/icon/basket.png" alt="basket icon" />
+        </div>
+        <div class="basket__text">корзина</div>
+        <div class="basket__numb" id="basket__numb">12</div>
+      </a>
+    </div>
+    <!-- END Basket -->
+
+    <!-- START ADVANTAGES -->
+    <section class="advantages">
+      <div class="container">
+        <div class="advantages__box advantages__bottom">
+          <div class="advantages__leaf">
+            <img src="./img/icon/leaf.png" alt="leaf img" />
+          </div>
+          <div class="advantages__box-item advantages__bottom-item">
+            <img src="./img/icon/advantages__arch/arch.png" alt="icon arch" />
+            <h3>Теплицы Арочные</h3>
+            <div class="advantages-hr"></div>
+          </div>
+          <div class="advantages__box-item advantages__bottom-item">
+            <img
+              src="./img/icon/advantages__arch/straight-walled.png"
+              alt="icon arch"
+            />
+            <h3>Теплицы Прямостенные</h3>
+            <div class="advantages-hr"></div>
+          </div>
+          <div class="advantages__box-item advantages__bottom-item">
+            <img src="./img/icon/advantages__arch/blob.png" alt="icon arch" />
+            <h3>Теплицы Капельки</h3>
+            <div class="advantages-hr"></div>
+          </div>
+          <div class="advantages__box-item advantages__bottom-item">
+            <img src="./img/icon/advantages__arch/house.png" alt="icon arch" />
+            <h3>Теплицы Домик</h3>
+            <div class="advantages-hr"></div>
+          </div>
+
+          <div class="advantages__box-item advantages__bottom-item">
+            <img
+              src="./img/icon/advantages__arch/mitlider.png"
+              alt="icon arch"
+            />
+            <h3>Теплицы Митлайдер</h3>
+            <div class="advantages-hr"></div>
+          </div>
+          <div class="advantages__box-item advantages__bottom-item">
+            <img src="./img/icon/advantages__arch/bed.png" alt="icon arch" />
+            <h3>Грядки для теплиц</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END ADVANTAGES -->
+    <section class="cart">
+      <div class="container">
+        <div class="cart__nav">
+          <ul>
+            <li class="li__nav-item"><a href="./index.html">Главная</a></li>
+            <li class="li__nav-item"><a href="./index.html">Каталог</a></li>
+            <li class="li__nav-item">
+              <a href="#">Теплица Арочная 20х20+20х20 - 2.5м</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- END NAV -->
+
+        <div class="cart__box">
+          <div class="cart__box-img">
+            <!-- Swiper -->
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/cart.png" alt="cart img" />
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="arrow arrow-prev">
+              <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+            </div>
+            <div class="arrow arrow-next">
+              <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+            </div>
+          </div>
+          <!-- END cart IMG -->
+
+          <div class="cart__box-info cart__info">
+            <div class="cart__info-h">
+              <h2>Теплица Арочная 20х20+20х20 - 2.5м</h2>
+              <!-- Теплица Арочная 20х20+20х20 - 2.5м  -->
+            </div>
+            <!-- END H -->
+
+            <div class="cart__info-table">
+              <table width="100%" cellpadding="4">
+                <tbody>
+                  <tr>
+                    <td>Каркас:</td>
+                    <td>20 х 20 мм</td>
+                  </tr>
+                  <tr>
+                    <td>Оцинковка:</td>
+                    <td>внутри и снаружи</td>
+                  </tr>
+                  <tr>
+                    <td>Поликарбонат:</td>
+                    <td>с защитой от ультрафиолета</td>
+                  </tr>
+                  <tr>
+                    <td>Крепления:</td>
+                    <td>краб-система, 4 болта</td>
+                  </tr>
+                  <tr>
+                    <td>Комплектация:</td>
+                    <td>две двери, две форточки</td>
+                  </tr>
+                  <tr>
+                    <td>Снеговая нагрузка:</td>
+                    <td>285 кг/м2</td>
+                  </tr>
+                  <tr>
+                    <td>Количество стяжек:</td>
+                    <td>5 шт</td>
+                  </tr>
+                  <tr>
+                    <td>Гарантия:</td>
+                    <td>пожизненная</td>
+                  </tr>
+                  <tr>
+                    <td>Ширина:</td>
+                    <td>2.5 м</td>
+                  </tr>
+                  <tr>
+                    <td>Высота:</td>
+                    <td>2.1 м</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- END TABLE -->
+
+            <div class="cart__info-price">
+              <div class="cart__info-lenght">
+                <h4>Длина</h4>
+                <select name="lenght" id="lenght" size="1">
+                  <option value="1 м">1 м</option>
+                  <option value="2 м">2 м</option>
+                  <option value="2.5 м">2.5 м</option>
+                  <option value="3 м">3 м</option>
+                </select>
+              </div>
+              <div class="cart__price">
+                <h5>14250 руб.</h5>
+                <div class="catalog__primary-btn ffOpenSansCond">
+                  <button>ЗАКАЗАТЬ</button>
+                </div>
+              </div>
+            </div>
+            <!-- END Price -->
+            <div class="cart__info-extra cart__extra">
+              <div class="cart__extra-h">
+                <h5>Дополнительные опции</h5>
+              </div>
+
+              <div class="cart__extra-table">
+                <table width="100%" cellpadding="4" border="2">
+                  <tbody>
+                    <tr>
+                      <td class="extra__table-input round">
+                        <label class="label__container">
+                          <input type="checkbox" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>Дополнительная форточка</td>
+                      <td class="extra__table-price">1450 руб.</td>
+                      <td>
+                        <div class="catalog__primary-btn ffOpenSansCond">
+                          <button>ЗАКАЗАТЬ</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="extra__table-input round">
+                        <label class="label__container">
+                          <input type="checkbox" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>Дополнительная форточка</td>
+                      <td class="extra__table-price">1450 руб.</td>
+                      <td>
+                        <div class="catalog__primary-btn ffOpenSansCond">
+                          <button>ЗАКАЗАТЬ</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="extra__table-input round">
+                        <label class="label__container">
+                          <input type="checkbox" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>Дополнительная форточка</td>
+                      <td class="extra__table-price">1450 руб.</td>
+                      <td>
+                        <div class="catalog__primary-btn ffOpenSansCond">
+                          <button>ЗАКАЗАТЬ</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="extra__table-input round">
+                        <label class="label__container">
+                          <input type="checkbox" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>Дополнительная форточка</td>
+                      <td class="extra__table-price">1450 руб.</td>
+                      <td>
+                        <div class="catalog__primary-btn ffOpenSansCond">
+                          <button>ЗАКАЗАТЬ</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="extra__table-input round">
+                        <label class="label__container">
+                          <input type="checkbox" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>Дополнительная форточка</td>
+                      <td class="extra__table-price">1450 руб.</td>
+                      <td>
+                        <div class="catalog__primary-btn ffOpenSansCond">
+                          <button>ЗАКАЗАТЬ</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- START CATALOG interesting -->
+    <section class="interesting catalog">
+      <div class="container">
+        <div class="interesting__h primary-h catalog__h">
+          <div class="dashed-hr"></div>
+          <h2>ВОЗМОЖНО ВАС ЗАИНТЕРЕСУЕТ</h2>
+          <!-- ВОЗМОЖНО ВАС ЗАИНТЕРЕСУЕТ -->
+          <div class="dashed-hr"></div>
+        </div>
+        <!-- END H -->
+
+        <div class="interesting__box catalog__box">
+          <div class="interesting__box-item catalog__box-item">
+            <div class="catalog__item-img">
+              <img src="./img/catalog/arch/arch.png" alt="arch img" />
+              <div class="catalog__item-has">
+                <div class="arrow">
+                  <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                </div>
+              </div>
+            </div>
+            <div class="catalog__item-content">
+              <div class="catalog__item-h">
+                <h5>Теплица Арочная 20х20+20х20 - 2.5м</h5>
+                <h6>...</h6>
+              </div>
+              <div class="catalog__item-price">
+                <div class="price" id="price">12000</div>
+                руб.
+              </div>
+
+              <div class="catalog__hr"></div>
+
+              <div class="catalog__item-btn ffOpenSansCond">
+                <div class="catalog__btn">
+                  <button>ПОДРОБНЕЕ</button>
+                </div>
+                <div class="catalog__primary-btn">
+                  <button>ЗАКАЗАТЬ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ITEM -->
+          <div class="interesting__box-item catalog__box-item">
+            <div class="catalog__item-img">
+              <img src="./img/catalog/arch/arch.png" alt="arch img" />
+              <div class="catalog__item-has">
+                <div class="arrow">
+                  <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                </div>
+              </div>
+            </div>
+            <div class="catalog__item-content">
+              <div class="catalog__item-h">
+                <h5>Теплица Арочная 20х20+20х20 - 2.5м</h5>
+                <h6>...</h6>
+              </div>
+              <div class="catalog__item-price">
+                <div class="price" id="price">12000</div>
+                руб.
+              </div>
+
+              <div class="catalog__hr"></div>
+
+              <div class="catalog__item-btn ffOpenSansCond">
+                <div class="catalog__btn">
+                  <button>ПОДРОБНЕЕ</button>
+                </div>
+                <div class="catalog__primary-btn">
+                  <button>ЗАКАЗАТЬ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ITEM -->
+          <div class="interesting__box-item catalog__box-item">
+            <div class="catalog__item-img">
+              <img src="./img/catalog/arch/arch.png" alt="arch img" />
+              <div class="catalog__item-has">
+                <div class="arrow">
+                  <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                </div>
+              </div>
+            </div>
+            <div class="catalog__item-content">
+              <div class="catalog__item-h">
+                <h5>Теплица Арочная 20х20+20х20 - 2.5м</h5>
+                <h6>...</h6>
+              </div>
+              <div class="catalog__item-price">
+                <div class="price" id="price">12000</div>
+                руб.
+              </div>
+
+              <div class="catalog__hr"></div>
+
+              <div class="catalog__item-btn ffOpenSansCond">
+                <div class="catalog__btn">
+                  <button>ПОДРОБНЕЕ</button>
+                </div>
+                <div class="catalog__primary-btn">
+                  <button>ЗАКАЗАТЬ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ITEM -->
+          <div class="interesting__box-item catalog__box-item">
+            <div class="catalog__item-img">
+              <img src="./img/catalog/arch/arch.png" alt="arch img" />
+              <div class="catalog__item-has">
+                <div class="arrow">
+                  <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                </div>
+              </div>
+            </div>
+            <div class="catalog__item-content">
+              <div class="catalog__item-h">
+                <h5>Теплица Арочная 20х20+20х20 - 2.5м</h5>
+                <h6>...</h6>
+              </div>
+              <div class="catalog__item-price">
+                <div class="price" id="price">12000</div>
+                руб.
+              </div>
+
+              <div class="catalog__hr"></div>
+
+              <div class="catalog__item-btn ffOpenSansCond">
+                <div class="catalog__btn">
+                  <button>ПОДРОБНЕЕ</button>
+                </div>
+                <div class="catalog__primary-btn">
+                  <button>ЗАКАЗАТЬ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- END CATALOG interesting -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo">
+          <div class="footer__logo-h">
+            <h2>ГОСТ-ТЕПЛИЦА</h2>
+          </div>
+          <p>Надежные теплицы от завода изготовителя</p>
+        </div>
+        <!-- END FOOTER LOGO -->
+        <div class="header__menu-contacts footer__contacts ffOpenSansCond">
+          <a href="tel:88005559413">8 (800) 555 94 13</a>
+        </div>
+        <!-- END CONTACTS -->
+        <div class="primary-btn ffOpenSansCond">
+          <button class="primary-btn" type="submit" id="header__btn">
+            <img src="./img/icon/phone__icon.png" alt="icon-phone" /> ЗАКАЗАТЬ
+            ОБРАТНЫЙ ЗВОНОК
+          </button>
+        </div>
+        <!-- END MENU BTN -->
+        <div class="footer__offer">
+          <a href="#">Пользовательское соглашение и публичная оферта</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.7/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
+</html>
