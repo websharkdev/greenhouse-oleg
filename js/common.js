@@ -144,11 +144,34 @@ if (screen.width < 560) {
   })
   console.log(items.length)
 }
+$(".modalQuick__arrow").on('click', function() {
+  $(".modalQuick").addClass('hide');
+});
+$(".modalQuick__btns .cancel").on("click", function () {
+  $(".modalQuick").addClass("hide");
+});
+$(".takeOrder").on("click", function () {
+  $(".modalQuick").toggleClass("hide");
+  $(document).mouseup(function (e) {
+    if ($(".modalQuick").has(e.target).length === 0) {
+      $(".modalQuick").addClass("hide");
+    }
+  });
+});
+
+
+$("#phone").mask("7-999-999-99-99");
+
+$(".minicart__input").mask("7-999-999-99-99");
+
+
+
 
 let catalogArrow = document.querySelector(".catalog__filter-arrow");
 let catalogFilter = document.querySelector(".catalog__filter");
 
-catalogArrow.addEventListener('click', (e) => {
-  catalogArrow.classList.toggle('flipArrow')
+catalogArrow.addEventListener("click", (e) => {
+  catalogArrow.classList.toggle("flipArrow");
   catalogFilter.classList.toggle("shortCatalogFilter");
 });
+

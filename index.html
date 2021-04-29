@@ -13,6 +13,7 @@
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/main.min.css" />
+  <link rel="stylesheet" href="./css/quiz.min.css" />
   <title>Теплицы</title>
 </head>
 
@@ -84,7 +85,7 @@
           <a href="tel:88005559413">8 (800) 555 94 13</a>
         </div>
         <!-- END CONTACTS -->
-        <div class="header__menu-btn primary-btn ffOpenSansCond">
+        <div class="header__menu-btn primary-btn takeOrder ffOpenSansCond">
           <button class="primary-btn" type="submit" id="header__btn">
             <img src="./img/icon/phone__icon.png" alt="icon-phone" /> ЗАКАЗАТЬ
             ОБРАТНЫЙ ЗВОНОК
@@ -161,6 +162,27 @@
     </div>
   </header>
   <!-- End HEADER -->
+
+  <!-- START MODAL -->
+  <div class="modalQuick hide">
+    <div class="modalQuick__arrow">
+        &#10006;
+    </div>
+    <div class="modalQuick__h ffOpenSansCond">
+      <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+    </div>
+    <div class="modalQuick__form">
+      <input type="text" placeholder="Имя">
+      <input type="tel" class="form__input" id="phone" name="phone" placeholder="Телефон" required/>
+      <p>Нажимая кнопку «Позвоните мне», я даю 
+согласие на обработку <a href="#">персональных данных</a></p>
+    </div>
+    <div class="modalQuick__btns ffOpenSansCond">
+      <button class="cancel">Отмена</button>
+      <button><img src="./img/icon/phone__icon.png" alt="phone"> ПОЗВОНИТЕ МНЕ</button>
+    </div>
+  </div>
+  <!-- END MODAL -->
 
     <!-- START Basket -->
     <div class="basket" id="basket">
@@ -544,8 +566,15 @@
             </div>
           </div>
           <div class="quiz__box-btn ffOpenSansCond">
-            <button>ПОДОБРАТЬ ТЕПЛИЦУ</button>
+            <button class="quizBTN" id="quizBTN">ПОДОБРАТЬ ТЕПЛИЦУ</button>
           </div>
+        </div>
+
+        <div id="quizContainer">
+          <div id="quiz"></div>
+          <div class="QuizButton" id="prev"><a href="#">ПРЕДЫДУЩИЙ ВОПРОС</a></div>
+          <div class="QuizButton" id="next"><a href="#">Следующий вопрос</a></div>
+          <div class="QuizButton" id="start"><a href="#">Начать</a></div>
         </div>
       </div>
     </div>
@@ -1545,6 +1574,9 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.7/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+  <script src="./js/quiz.js"></script>
   <script src="./js/common.js"></script>
 </body>
 
