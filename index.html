@@ -12,8 +12,8 @@
   <meta name="revisit-after" content="2 days" />
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./css/main.min.css" />
   <link rel="stylesheet" href="./css/quiz.min.css" />
+  <link rel="stylesheet" href="./css/main.min.css" />
   <title>Теплицы</title>
 </head>
 
@@ -21,23 +21,32 @@
   <!-- Start HEADER -->
   <header class="header" style="
         background: url(./img/bg/header__bg.png) no-repeat;
-        background-position: center center;
+        background-position: 35% 0;
         background-size: cover;
       ">
-    
+
     <div class="header__mobile">
       <div class="header__menu-mobile">
         <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden">
         <label for="checkbox4">
-            <div class="hamburger hamburger4">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-                <span class="bar bar4"></span>
-                <span class="bar bar5"></span>
-            </div>
+          <div class="hamburger hamburger4">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+            <span class="bar bar5"></span>
+          </div>
         </label>
-
+        <div class="header__menu-contacts ffOpenSansCond">
+          <a href="tel:88005559413">8 (800) 555 94 13</a>
+        </div>
+        <!-- END CONTACTS -->
+        <div class="header__menu-btn primary-btn takeOrder ffOpenSansCond">
+          <button class="primary-btn" type="submit" id="header__btn">
+            <img src="./img/icon/phone__icon.png" alt="icon-phone" /> ЗАКАЗАТЬ
+            ОБРАТНЫЙ ЗВОНОК
+          </button>
+        </div>
       </div>
       <!-- header__menu-mobile -->
       <div class="header__top-city header__mobile-city">
@@ -141,15 +150,17 @@
         </div>
         <!-- END HEADER STOCK -->
 
-        <div class="header__bottom-text">
+        <div class="header__bottom-text ffOpenSansCond">
           <p>Только <span>3 дня</span> подарки каждому покупателю!</p>
-          <div class="text__with-hr">
-            <div class="hr"></div>
-            <div class="text__box">
-              <h3>Дополнительная форточка</h3>
-              <p>при покупке от 20 000 руб. в подарок!</p>
-              <h3>Автомат для форточки</h3>
-              <p>при покупке от 20 000 руб. в подарок!</p>
+          <div class="text__content">
+            <div class="text__with-hr">
+              <div class="hr"></div>
+              <div class="text__box">
+                <h3>Дополнительная форточка</h3>
+                <p>при покупке от 20 000 руб. в подарок!</p>
+                <h3>Автомат для форточки</h3>
+                <p>при покупке от 20 000 руб. в подарок!</p>
+              </div>
             </div>
             <div class="text__img">
               <img src="./img/icon/header__img.png" alt="image circle" />
@@ -166,16 +177,16 @@
   <!-- START MODAL -->
   <div class="modalQuick hide">
     <div class="modalQuick__arrow">
-        &#10006;
+      &#10006;
     </div>
     <div class="modalQuick__h ffOpenSansCond">
       <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
     </div>
     <div class="modalQuick__form">
       <input type="text" placeholder="Имя">
-      <input type="tel" class="form__input" id="phone" name="phone" placeholder="Телефон" required/>
-      <p>Нажимая кнопку «Позвоните мне», я даю 
-согласие на обработку <a href="#">персональных данных</a></p>
+      <input type="tel" class="form__input" id="phone" name="phone" placeholder="Телефон" required />
+      <p>Нажимая кнопку «Позвоните мне», я даю
+        согласие на обработку <a href="#">персональных данных</a></p>
     </div>
     <div class="modalQuick__btns ffOpenSansCond">
       <button class="cancel">Отмена</button>
@@ -184,119 +195,119 @@
   </div>
   <!-- END MODAL -->
 
-    <!-- START Basket -->
-    <div class="basket" id="basket">
-        <a href="#">
-            <div class="basket__img">
-                <img src="./img/icon/basket.png" alt="basket icon" />
-            </div>
-            <div class="basket__text">корзина</div>
-            <div class="basket__numb" id="basket__numb">12</div>
-        </a>
+  <!-- START Basket -->
+  <div class="basket" id="basket">
+    <a href="#">
+      <div class="basket__img">
+        <img src="./img/icon/basket.png" alt="basket icon" />
+      </div>
+      <div class="basket__text">корзина</div>
+      <div class="basket__numb" id="basket__numb">12</div>
+    </a>
+  </div>
+  <!-- END Basket -->
+
+  <!-- START MINICART -->
+  <div class="minicart hide" id="minicart">
+    <div class="minicart__close">
+      <button>&#10006;</button>
     </div>
-    <!-- END Basket -->
-
-    <!-- START MINICART -->
-    <div class="minicart hide" id="minicart">
-        <div class="minicart__close">
-            <button>&#10006;</button>
-        </div>
-        <div class="minicart__table">
-            <table width="100%" cellpadding="4">
-                <thead>
-                    <th></th>
-                    <th>
-                        Наименование
-                    </th>
-                    <th>
-                        Кол-во
-                    </th>
-                    <th>
-                        Стоимость
-                    </th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="minicart__img">
-                            <img src="./img/catalog/arch/arch.png" alt="">
-                        </td>
-                        <td class="minicart__name">Теплица Арочная 
-20х20+20х20 - 2.5м </td>
-                        <td class="minicart__quantity">
-                            <button class="plus">+</button>
-                            <input type="number" readonly value="2">
-                            <button class="minus">-</button>
-                        </td>
-                        <td class="minicart__subtotal"><span id="subtotal">14 800</span> p.</td>
-                        <td class="minicart__arrow">
-                            <button>&#10006;</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="minicart__img">
-                            <img src="./img/catalog/arch/arch.png" alt="">
-                        </td>
-                        <td class="minicart__name">Теплица Арочная 
-20х20+20х20 - 2.5м </td>
-                        <td class="minicart__quantity">
-                            <button class="plus">+</button>
-                            <input type="number" readonly value="2">
-                            <button class="minus">-</button>
-                        </td>
-                        <td class="minicart__subtotal"><span id="subtotal">14 800</span> p.</td>
-                        <td class="minicart__arrow">
-                            <button>&#10006;</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- END TABLE -->
-        <div class="dashed-hr"></div>
-        <!-- END DAHSED -->
-        <div class="minicart__total">
-            Итого: <span class="total">330 000</span> <span class="currency__symbol">руб.</span>
-        </div>
-        
-        <!-- END TOTAL -->
-        <div class="dashed-hr"></div>
-        <!-- END DAHSED -->
-            <div class="minicart__form">
-                <div class="fio">
-                    <input type="text" class="minicart__input" placeholder="Укажите ФИО">
-                </div>
-                <div class="adress">
-                    <input type="text" class="minicart__input" placeholder="Адрес">
-                </div>
-                <div class="phone">
-                    <input type="phone" class="minicart__input" placeholder="+7 ( ___ ) - ___ - __ - __">
-                </div>
-                <div class="email">
-                    <input type="email" class="minicart__input" placeholder="E-mail">
-                </div>
-            </div>
-        <div class="minicart__bottom">
-            <div class="minicart__data">
-                <p>Нажимая кнопку “Оформить заказ”, я даю согласие
-на обработку моих <a href="#">персональных данных</a></p>
-            </div>
-            <div class="minicart__btn primary-btn ffOpenSansCond">
-                <button>ОФОРМИТЬ ЗАКАЗ</button>
-            </div>
-        </div>
-
-        <!-- END FORM -->
-
+    <div class="minicart__table">
+      <table width="100%" cellpadding="4">
+        <thead>
+          <th></th>
+          <th>
+            Наименование
+          </th>
+          <th>
+            Кол-во
+          </th>
+          <th>
+            Стоимость
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="minicart__img">
+              <img src="./img/catalog/arch/arch.png" alt="">
+            </td>
+            <td class="minicart__name">Теплица Арочная
+              20х20+20х20 - 2.5м </td>
+            <td class="minicart__quantity">
+              <button class="plus">+</button>
+              <input type="number" readonly value="2">
+              <button class="minus">-</button>
+            </td>
+            <td class="minicart__subtotal"><span id="subtotal">14 800</span> p.</td>
+            <td class="minicart__arrow">
+              <button>&#10006;</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="minicart__img">
+              <img src="./img/catalog/arch/arch.png" alt="">
+            </td>
+            <td class="minicart__name">Теплица Арочная
+              20х20+20х20 - 2.5м </td>
+            <td class="minicart__quantity">
+              <button class="plus">+</button>
+              <input type="number" readonly value="2">
+              <button class="minus">-</button>
+            </td>
+            <td class="minicart__subtotal"><span id="subtotal">14 800</span> p.</td>
+            <td class="minicart__arrow">
+              <button>&#10006;</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- END TABLE -->
+    <div class="dashed-hr"></div>
+    <!-- END DAHSED -->
+    <div class="minicart__total">
+      Итого: <span class="total">330 000</span> <span class="currency__symbol">руб.</span>
     </div>
 
-    <!-- END MINICART -->
+    <!-- END TOTAL -->
+    <div class="dashed-hr"></div>
+    <!-- END DAHSED -->
+    <div class="minicart__form">
+      <div class="fio">
+        <input type="text" class="minicart__input" placeholder="Укажите ФИО">
+      </div>
+      <div class="adress">
+        <input type="text" class="minicart__input" placeholder="Адрес">
+      </div>
+      <div class="phone">
+        <input type="phone" class="minicart__input" placeholder="+7 ( ___ ) - ___ - __ - __">
+      </div>
+      <div class="email">
+        <input type="email" class="minicart__input" placeholder="E-mail">
+      </div>
+    </div>
+    <div class="minicart__bottom">
+      <div class="minicart__data">
+        <p>Нажимая кнопку “Оформить заказ”, я даю согласие
+          на обработку моих <a href="#">персональных данных</a></p>
+      </div>
+      <div class="minicart__btn primary-btn ffOpenSansCond">
+        <button>ОФОРМИТЬ ЗАКАЗ</button>
+      </div>
+    </div>
+
+    <!-- END FORM -->
+
+  </div>
+
+  <!-- END MINICART -->
 
   <!-- START ADVANTAGES -->
   <section class="advantages">
     <div class="container">
       <div class="advantages__box advantages__top">
         <div class="advantages__box-item">
-          <img src="./img/icon/advantages/delivery.png" alt="icon advantages" />
+          <img src="./img/icon/advantages/guarantee.png" alt="icon advantages" />
           <div class="advantages__item-text">
             <p>Мы <span>завод-изготовитель.</span>
             <!-- Мы завод-изготовитель. -->
@@ -309,14 +320,14 @@
         </div>
         <!-- END ADVANTAGES 1 -->
         <div class="advantages__box-item">
-          <img src="./img/icon/advantages/delivery.png" alt="icon advantages" />
+          <img src="./img/icon/advantages/safe.png" alt="icon advantages" />
           <div class="advantages__item-text">
-            <p>Мы <span>завод-изготовитель.</span>
-            <!-- Мы завод-изготовитель. -->
-            <br/><span>Пожизненная гарантия</span> на теплицы.
-            <!-- Пожизненная гарантия на теплицы. -->
-            <br/><span>Оцинкованный</span> внутри и снаружи металл</p>
-            <!-- Оцинкованный внутри и снаружи металл -->
+            <p>
+              Надежная <span>краб-система.</span><br/>
+              Защита <span>от ржавчины и коррозии.</span><br/>
+              Поликарбонат с <span>защитой</span> <br/>
+              <span>от ультрафиолета.</span>
+            </p>
           </div>
           <!-- TEXT -->
         </div>
@@ -324,65 +335,71 @@
         <div class="advantages__box-item">
           <img src="./img/icon/advantages/delivery.png" alt="icon advantages" />
           <div class="advantages__item-text">
-            <p>Мы <span>завод-изготовитель.</span>
-            <!-- Мы завод-изготовитель. -->
-            <br/><span>Пожизненная гарантия</span> на теплицы.
-            <!-- Пожизненная гарантия на теплицы. -->
-            <br/><span>Оцинкованный</span> внутри и снаружи металл</p>
-            <!-- Оцинкованный внутри и снаружи металл -->
+            <p>
+              <span>Быстрая доставка</span> теплицы до Вас.<br/>
+              Сборка теплицы <span>в день доставки.</span><br/>
+              Оплата <span>после доставки теплицы. </span>
+            </p>
           </div>
           <!-- TEXT -->
         </div>
         <!-- END ADVANTAGES 3 -->
       </div>
-      <!-- END advantages__top-->
-      <div class="advantages__box advantages__bottom">
+      
+      <div class="advantages__wrapper">
         <div class="advantages__leaf">
           <img src="./img/icon/leaf.png" alt="leaf img" />
         </div>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/arch.png" alt="icon arch" />
-            <h3>Теплицы Арочные</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/straight-walled.png" alt="icon arch" />
-            <h3>Теплицы Прямостенные</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/blob.png" alt="icon arch" />
-            <h3>Теплицы Капельки</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/house.png" alt="icon arch" />
-            <h3>Теплицы Домик</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/mitlider.png" alt="icon arch" />
-            <h3>Теплицы Митлайдер</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/bed.png" alt="icon arch" />
-            <h3>Грядки для теплиц</h3>
-          </div>
-        </a>
+        <div class="advantages__box advantages__bottom ffOpenSansCond">
+          <a href="#" class="active">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/arch.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/arch__active.png" class="forActive" alt="icon arch" />
+              <h3>Грядки для теплиц</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/straight-walled.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/straight-walled__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Прямостенные</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/blob.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/blob__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Капельки</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/house.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/house__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Домик</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+  
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/mitlider.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/mitlider__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Митлайдер</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+  
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/bed.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/bed__active.png" class="forActive" alt="icon arch" />
+              <h3>Грядки для теплиц</h3>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
     </div>
@@ -549,13 +566,14 @@
       <div class="quiz__box" style="
             background: url(./img/bg/catalog__quiz-bg.png) center center
               no-repeat;
-            background-size: cover;
+            background-size: contain;
           ">
         <div class="quiz__box-h ffOpenSansCond">
           <h2>КАКОЙ ТИП ТЕПЛИЦЫ ВАМ ПОДОЙДЕТ ЛУЧШЕ?</h2>
         </div>
 
-        <div class="quiz__box-text">
+        <div class="quiz__box-content">
+          <div class="quiz__box-text">
           <div class="text__with-hr">
             <div class="hr"></div>
             <div class="text__box">
@@ -565,12 +583,13 @@
               </p>
             </div>
           </div>
-          <div class="quiz__box-btn ffOpenSansCond">
-            <button class="quizBTN" id="quizBTN">ПОДОБРАТЬ ТЕПЛИЦУ</button>
-          </div>
+        </div>
+        <div class="quiz__box-btn ffOpenSansCond">
+          <button class="quizBTN" id="quizBTN">ПОДОБРАТЬ ТЕПЛИЦУ</button>
+        </div>
         </div>
 
-        <div id="quizContainer">
+        <div id="quizContainer" class="ffOpenSansCond">
           <div id="quiz"></div>
           <div class="QuizButton" id="prev"><a href="#">ПРЕДЫДУЩИЙ ВОПРОС</a></div>
           <div class="QuizButton" id="next"><a href="#">Следующий вопрос</a></div>
@@ -835,7 +854,7 @@
         <!-- END ITEM -->
         <div class="blob__box-item blob__stock catalog__box-item" style="
               background: url(./img/catalog/stock.png) center center no-repeat;
-              background-size: 110%;
+              background-size: 107%;
             ">
           <div class="blob__item-text ffOpenSansCond">
             <p>
@@ -1223,7 +1242,7 @@
       <div class="mitlider__text">
         <div class="text__with-hr">
           <div class="hr"></div>
-          <div class="text__box">
+          <div class="text__box ffOpenSansCond">
             <p>
               Благодаря прочному фундаменту, каркас вашей теплицы
               <span>не согнется под весом снега</span>
@@ -1372,7 +1391,7 @@
       </div>
       <!-- END H -->
       <div class="feedback__box">
-        <div class="swiper-container">
+        <div class="swiper-container feedback-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="swiper-slide__p">
@@ -1528,10 +1547,10 @@
           <!-- Add Pagination -->
         </div>
         <!-- Add Arrows -->
-        <div class="arrow arrow-prev">
+        <div class="arrow arrow-prev feedback-prev">
           <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
         </div>
-        <div class="arrow arrow-next">
+        <div class="arrow arrow-next feedback-next">
           <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
         </div>
       </div>
@@ -1577,6 +1596,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
   <script src="./js/quiz.js"></script>
+  <script src="./js/feedback.js"></script>
   <script src="./js/common.js"></script>
 </body>
 

@@ -20,7 +20,7 @@
   <!-- Start HEADER -->
   <header class="header" style="
         background: url(./img/bg/header__bg.png) no-repeat;
-        background-position: center center;
+        background-position: 35% 0;
         background-size: cover;
       ">
 
@@ -36,7 +36,16 @@
             <span class="bar bar5"></span>
           </div>
         </label>
-
+        <div class="header__menu-contacts ffOpenSansCond">
+          <a href="tel:88005559413">8 (800) 555 94 13</a>
+        </div>
+        <!-- END CONTACTS -->
+        <div class="header__menu-btn primary-btn takeOrder ffOpenSansCond">
+          <button class="primary-btn" type="submit" id="header__btn">
+            <img src="./img/icon/phone__icon.png" alt="icon-phone" /> ЗАКАЗАТЬ
+            ОБРАТНЫЙ ЗВОНОК
+          </button>
+        </div>
       </div>
       <!-- header__menu-mobile -->
       <div class="header__top-city header__mobile-city">
@@ -84,7 +93,7 @@
           <a href="tel:88005559413">8 (800) 555 94 13</a>
         </div>
         <!-- END CONTACTS -->
-        <div class="header__menu-btn primary-btn ffOpenSansCond">
+        <div class="header__menu-btn primary-btn takeOrder ffOpenSansCond">
           <button class="primary-btn" type="submit" id="header__btn">
             <img src="./img/icon/phone__icon.png" alt="icon-phone" /> ЗАКАЗАТЬ
             ОБРАТНЫЙ ЗВОНОК
@@ -140,15 +149,17 @@
         </div>
         <!-- END HEADER STOCK -->
 
-        <div class="header__bottom-text">
+        <div class="header__bottom-text ffOpenSansCond">
           <p>Только <span>3 дня</span> подарки каждому покупателю!</p>
-          <div class="text__with-hr">
-            <div class="hr"></div>
-            <div class="text__box">
-              <h3>Дополнительная форточка</h3>
-              <p>при покупке от 20 000 руб. в подарок!</p>
-              <h3>Автомат для форточки</h3>
-              <p>при покупке от 20 000 руб. в подарок!</p>
+          <div class="text__content">
+            <div class="text__with-hr">
+              <div class="hr"></div>
+              <div class="text__box">
+                <h3>Дополнительная форточка</h3>
+                <p>при покупке от 20 000 руб. в подарок!</p>
+                <h3>Автомат для форточки</h3>
+                <p>при покупке от 20 000 руб. в подарок!</p>
+              </div>
             </div>
             <div class="text__img">
               <img src="./img/icon/header__img.png" alt="image circle" />
@@ -161,6 +172,27 @@
     </div>
   </header>
   <!-- End HEADER -->
+
+  <!-- START MODAL -->
+  <div class="modalQuick hide">
+    <div class="modalQuick__arrow">
+      &#10006;
+    </div>
+    <div class="modalQuick__h ffOpenSansCond">
+      <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+    </div>
+    <div class="modalQuick__form">
+      <input type="text" placeholder="Имя">
+      <input type="tel" class="form__input" id="phone" name="phone" placeholder="Телефон" required />
+      <p>Нажимая кнопку «Позвоните мне», я даю
+        согласие на обработку <a href="#">персональных данных</a></p>
+    </div>
+    <div class="modalQuick__btns ffOpenSansCond">
+      <button class="cancel">Отмена</button>
+      <button><img src="./img/icon/phone__icon.png" alt="phone"> ПОЗВОНИТЕ МНЕ</button>
+    </div>
+  </div>
+  <!-- END MODAL -->
 
   <!-- START Basket -->
   <div class="basket" id="basket">
@@ -272,53 +304,60 @@
   <!-- START ADVANTAGES -->
   <section class="advantages">
     <div class="container">
-      <div class="advantages__box advantages__bottom">
+      <div class="advantages__wrapper">
         <div class="advantages__leaf">
           <img src="./img/icon/leaf.png" alt="leaf img" />
         </div>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/arch.png" alt="icon arch" />
-            <h3>Теплицы Арочные</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/straight-walled.png" alt="icon arch" />
-            <h3>Теплицы Прямостенные</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/blob.png" alt="icon arch" />
-            <h3>Теплицы Капельки</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/house.png" alt="icon arch" />
-            <h3>Теплицы Домик</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/mitlider.png" alt="icon arch" />
-            <h3>Теплицы Митлайдер</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/bed.png" alt="icon arch" />
-            <h3>Грядки для теплиц</h3>
-          </div>
-        </a>
+        <div class="advantages__box advantages__bottom ffOpenSansCond">
+          <a href="#" class="active">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/arch.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/arch__active.png" class="forActive" alt="icon arch" />
+              <h3>Грядки для теплиц</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/straight-walled.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/straight-walled__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Прямостенные</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/blob.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/blob__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Капельки</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/house.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/house__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Домик</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+  
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/mitlider.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/mitlider__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Митлайдер</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+  
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/bed.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/bed__active.png" class="forActive" alt="icon arch" />
+              <h3>Грядки для теплиц</h3>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
     </div>
@@ -1294,7 +1333,10 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.7/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
   <script src="./js/common.js"></script>
+  <script src="./js/catalog.js"></script>
 </body>
 
 </html>

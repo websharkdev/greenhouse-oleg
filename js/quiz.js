@@ -29,6 +29,7 @@
 
   $(".quizBTN").on("click", function () {
     $(".quiz__box-text").addClass("hide");
+    $(".quiz__box-btn").addClass("hide");
     $("#quizContainer").css('display', 'flex');
   });
   // Display initial question

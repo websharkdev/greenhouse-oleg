@@ -20,23 +20,32 @@
   <!-- Start HEADER -->
   <header class="header" style="
         background: url(./img/bg/header__bg.png) no-repeat;
-        background-position: center center;
+        background-position: 35% 0;
         background-size: cover;
       ">
-    
+
     <div class="header__mobile">
       <div class="header__menu-mobile">
         <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden">
         <label for="checkbox4">
-            <div class="hamburger hamburger4">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-                <span class="bar bar4"></span>
-                <span class="bar bar5"></span>
-            </div>
+          <div class="hamburger hamburger4">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+            <span class="bar bar5"></span>
+          </div>
         </label>
-
+        <div class="header__menu-contacts ffOpenSansCond">
+          <a href="tel:88005559413">8 (800) 555 94 13</a>
+        </div>
+        <!-- END CONTACTS -->
+        <div class="header__menu-btn primary-btn takeOrder ffOpenSansCond">
+          <button class="primary-btn" type="submit" id="header__btn">
+            <img src="./img/icon/phone__icon.png" alt="icon-phone" /> ЗАКАЗАТЬ
+            ОБРАТНЫЙ ЗВОНОК
+          </button>
+        </div>
       </div>
       <!-- header__menu-mobile -->
       <div class="header__top-city header__mobile-city">
@@ -84,7 +93,7 @@
           <a href="tel:88005559413">8 (800) 555 94 13</a>
         </div>
         <!-- END CONTACTS -->
-        <div class="header__menu-btn primary-btn ffOpenSansCond">
+        <div class="header__menu-btn primary-btn takeOrder ffOpenSansCond">
           <button class="primary-btn" type="submit" id="header__btn">
             <img src="./img/icon/phone__icon.png" alt="icon-phone" /> ЗАКАЗАТЬ
             ОБРАТНЫЙ ЗВОНОК
@@ -140,15 +149,17 @@
         </div>
         <!-- END HEADER STOCK -->
 
-        <div class="header__bottom-text">
+        <div class="header__bottom-text ffOpenSansCond">
           <p>Только <span>3 дня</span> подарки каждому покупателю!</p>
-          <div class="text__with-hr">
-            <div class="hr"></div>
-            <div class="text__box">
-              <h3>Дополнительная форточка</h3>
-              <p>при покупке от 20 000 руб. в подарок!</p>
-              <h3>Автомат для форточки</h3>
-              <p>при покупке от 20 000 руб. в подарок!</p>
+          <div class="text__content">
+            <div class="text__with-hr">
+              <div class="hr"></div>
+              <div class="text__box">
+                <h3>Дополнительная форточка</h3>
+                <p>при покупке от 20 000 руб. в подарок!</p>
+                <h3>Автомат для форточки</h3>
+                <p>при покупке от 20 000 руб. в подарок!</p>
+              </div>
             </div>
             <div class="text__img">
               <img src="./img/icon/header__img.png" alt="image circle" />
@@ -162,163 +173,191 @@
   </header>
   <!-- End HEADER -->
 
-    <!-- START Basket -->
-    <div class="basket" id="basket">
-        <a href="#">
-            <div class="basket__img">
-                <img src="./img/icon/basket.png" alt="basket icon" />
-            </div>
-            <div class="basket__text">корзина</div>
-            <div class="basket__numb" id="basket__numb">12</div>
-        </a>
+  <!-- START MODAL -->
+  <div class="modalQuick hide">
+    <div class="modalQuick__arrow">
+      &#10006;
     </div>
-    <!-- END Basket -->
+    <div class="modalQuick__h ffOpenSansCond">
+      <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+    </div>
+    <div class="modalQuick__form">
+      <input type="text" placeholder="Имя">
+      <input type="tel" class="form__input" id="phone" name="phone" placeholder="Телефон" required />
+      <p>Нажимая кнопку «Позвоните мне», я даю
+        согласие на обработку <a href="#">персональных данных</a></p>
+    </div>
+    <div class="modalQuick__btns ffOpenSansCond">
+      <button class="cancel">Отмена</button>
+      <button><img src="./img/icon/phone__icon.png" alt="phone"> ПОЗВОНИТЕ МНЕ</button>
+    </div>
+  </div>
+  <!-- END MODAL -->
 
-    <!-- START MINICART -->
-    <div class="minicart hide" id="minicart">
-        <div class="minicart__close">
-            <button>&#10006;</button>
-        </div>
-        <div class="minicart__table">
-            <table width="100%" cellpadding="4">
-                <thead>
-                    <th></th>
-                    <th>
-                        Наименование
-                    </th>
-                    <th>
-                        Кол-во
-                    </th>
-                    <th>
-                        Стоимость
-                    </th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="minicart__img">
-                            <img src="./img/catalog/arch/arch.png" alt="">
-                        </td>
-                        <td class="minicart__name">Теплица Арочная 
-20х20+20х20 - 2.5м </td>
-                        <td class="minicart__quantity">
-                            <button class="plus">+</button>
-                            <input type="number" readonly value="2">
-                            <button class="minus">-</button>
-                        </td>
-                        <td class="minicart__subtotal"><span id="subtotal">14 800</span> p.</td>
-                        <td class="minicart__arrow">
-                            <button>&#10006;</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="minicart__img">
-                            <img src="./img/catalog/arch/arch.png" alt="">
-                        </td>
-                        <td class="minicart__name">Теплица Арочная 
-20х20+20х20 - 2.5м </td>
-                        <td class="minicart__quantity">
-                            <button class="plus">+</button>
-                            <input type="number" readonly value="2">
-                            <button class="minus">-</button>
-                        </td>
-                        <td class="minicart__subtotal"><span id="subtotal">14 800</span> p.</td>
-                        <td class="minicart__arrow">
-                            <button>&#10006;</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- END TABLE -->
-        <div class="dashed-hr"></div>
-        <!-- END DAHSED -->
-        <div class="minicart__total">
-            Итого: <span class="total">330 000</span> <span class="currency__symbol">руб.</span>
-        </div>
-        
-        <!-- END TOTAL -->
-        <div class="dashed-hr"></div>
-        <!-- END DAHSED -->
-            <div class="minicart__form">
-                <div class="fio">
-                    <input type="text" class="minicart__input" placeholder="Укажите ФИО">
-                </div>
-                <div class="adress">
-                    <input type="text" class="minicart__input" placeholder="Адрес">
-                </div>
-                <div class="phone">
-                    <input type="phone" class="minicart__input" placeholder="+7 ( ___ ) - ___ - __ - __">
-                </div>
-                <div class="email">
-                    <input type="email" class="minicart__input" placeholder="E-mail">
-                </div>
-            </div>
-        <div class="minicart__bottom">
-            <div class="minicart__data">
-                <p>Нажимая кнопку “Оформить заказ”, я даю согласие
-на обработку моих <a href="#">персональных данных</a></p>
-            </div>
-            <div class="minicart__btn primary-btn ffOpenSansCond">
-                <button>ОФОРМИТЬ ЗАКАЗ</button>
-            </div>
-        </div>
+  <!-- START Basket -->
+  <div class="basket" id="basket">
+    <a href="#">
+      <div class="basket__img">
+        <img src="./img/icon/basket.png" alt="basket icon" />
+      </div>
+      <div class="basket__text">корзина</div>
+      <div class="basket__numb" id="basket__numb">12</div>
+    </a>
+  </div>
+  <!-- END Basket -->
 
-        <!-- END FORM -->
-
+  <!-- START MINICART -->
+  <div class="minicart hide" id="minicart">
+    <div class="minicart__close">
+      <button>&#10006;</button>
+    </div>
+    <div class="minicart__table">
+      <table width="100%" cellpadding="4">
+        <thead>
+          <th></th>
+          <th>
+            Наименование
+          </th>
+          <th>
+            Кол-во
+          </th>
+          <th>
+            Стоимость
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="minicart__img">
+              <img src="./img/catalog/arch/arch.png" alt="">
+            </td>
+            <td class="minicart__name">Теплица Арочная
+              20х20+20х20 - 2.5м </td>
+            <td class="minicart__quantity">
+              <button class="plus">+</button>
+              <input type="number" readonly value="2">
+              <button class="minus">-</button>
+            </td>
+            <td class="minicart__subtotal"><span id="subtotal">14 800</span> p.</td>
+            <td class="minicart__arrow">
+              <button>&#10006;</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="minicart__img">
+              <img src="./img/catalog/arch/arch.png" alt="">
+            </td>
+            <td class="minicart__name">Теплица Арочная
+              20х20+20х20 - 2.5м </td>
+            <td class="minicart__quantity">
+              <button class="plus">+</button>
+              <input type="number" readonly value="2">
+              <button class="minus">-</button>
+            </td>
+            <td class="minicart__subtotal"><span id="subtotal">14 800</span> p.</td>
+            <td class="minicart__arrow">
+              <button>&#10006;</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- END TABLE -->
+    <div class="dashed-hr"></div>
+    <!-- END DAHSED -->
+    <div class="minicart__total">
+      Итого: <span class="total">330 000</span> <span class="currency__symbol">руб.</span>
     </div>
 
-    <!-- END MINICART -->
+    <!-- END TOTAL -->
+    <div class="dashed-hr"></div>
+    <!-- END DAHSED -->
+    <div class="minicart__form">
+      <div class="fio">
+        <input type="text" class="minicart__input" placeholder="Укажите ФИО">
+      </div>
+      <div class="adress">
+        <input type="text" class="minicart__input" placeholder="Адрес">
+      </div>
+      <div class="phone">
+        <input type="phone" class="minicart__input" placeholder="+7 ( ___ ) - ___ - __ - __">
+      </div>
+      <div class="email">
+        <input type="email" class="minicart__input" placeholder="E-mail">
+      </div>
+    </div>
+    <div class="minicart__bottom">
+      <div class="minicart__data">
+        <p>Нажимая кнопку “Оформить заказ”, я даю согласие
+          на обработку моих <a href="#">персональных данных</a></p>
+      </div>
+      <div class="minicart__btn primary-btn ffOpenSansCond">
+        <button>ОФОРМИТЬ ЗАКАЗ</button>
+      </div>
+    </div>
+
+    <!-- END FORM -->
+
+  </div>
+
+  <!-- END MINICART -->
 
   <!-- START ADVANTAGES -->
   <section class="advantages">
     <div class="container">
-      <div class="advantages__box advantages__bottom">
+      <div class="advantages__wrapper">
         <div class="advantages__leaf">
           <img src="./img/icon/leaf.png" alt="leaf img" />
         </div>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/arch.png" alt="icon arch" />
-            <h3>Теплицы Арочные</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/straight-walled.png" alt="icon arch" />
-            <h3>Теплицы Прямостенные</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/blob.png" alt="icon arch" />
-            <h3>Теплицы Капельки</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/house.png" alt="icon arch" />
-            <h3>Теплицы Домик</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/mitlider.png" alt="icon arch" />
-            <h3>Теплицы Митлайдер</h3>
-            <div class="advantages-hr"></div>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="advantages__box-item advantages__bottom-item">
-            <img src="./img/icon/advantages__arch/bed.png" alt="icon arch" />
-            <h3>Грядки для теплиц</h3>
-          </div>
-        </a>
+        <div class="advantages__box advantages__bottom ffOpenSansCond">
+          <a href="#" class="active">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/arch.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/arch__active.png" class="forActive" alt="icon arch" />
+              <h3>Грядки для теплиц</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/straight-walled.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/straight-walled__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Прямостенные</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/blob.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/blob__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Капельки</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/house.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/house__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Домик</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+  
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/mitlider.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/mitlider__active.png" class="forActive" alt="icon arch" />
+              <h3>Теплицы Митлайдер</h3>
+              <div class="advantages-hr"></div>
+            </div>
+          </a>
+  
+          <a href="#">
+            <div class="advantages__box-item advantages__bottom-item">
+              <img src="./img/icon/advantages__arch/bed.png" alt="icon arch" />
+              <img src="./img/icon/advantages__arch/bed__active.png" class="forActive" alt="icon arch" />
+              <h3>Грядки для теплиц</h3>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
     </div>
@@ -343,69 +382,58 @@
           <!-- Swiper -->
           <div class="swiper-container gallery-top">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: cover;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: cover;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: cover;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: cover;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: cover;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: cover;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: cover;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: cover;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
-              </div>
+
             </div>
           </div>
           <div class="swiper-container gallery-thumbs">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: contain;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: contain;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: contain;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: contain;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: contain;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: contain;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: contain;">
               </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./img/cart.png" alt="cart img" />
+              <div class="swiper-slide"
+                style="background: url(./img/cart.png) center center no-repeat; background-size: contain;">
               </div>
             </div>
           </div>
@@ -500,11 +528,11 @@
 
             <div class="cart__extra-table">
               <table width="100%" cellpadding="4" border="2">
-                <tbody>
+                <tbody class="extra__table">
                   <tr>
                     <td class="extra__table-input round">
                       <label class="label__container">
-                        <input type="checkbox" />
+                        <input type="checkbox" class="extra__table-checkbox" name="extra__checkbox"/>
                         <span class="checkmark"></span>
                       </label>
                     </td>
@@ -512,14 +540,14 @@
                     <td class="extra__table-price">1450 руб.</td>
                     <td>
                       <div class="catalog__primary-btn ffOpenSansCond">
-                        <button>ЗАКАЗАТЬ</button>
+                        <button class="extra__table-btn">ДОБАВИТЬ В ЗАКАЗ</button>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td class="extra__table-input round">
                       <label class="label__container">
-                        <input type="checkbox" />
+                        <input type="checkbox" class="extra__table-checkbox" name="extra__checkbox"/>
                         <span class="checkmark"></span>
                       </label>
                     </td>
@@ -527,14 +555,14 @@
                     <td class="extra__table-price">1450 руб.</td>
                     <td>
                       <div class="catalog__primary-btn ffOpenSansCond">
-                        <button>ЗАКАЗАТЬ</button>
+                        <button class="extra__table-btn">ДОБАВИТЬ В ЗАКАЗ</button>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td class="extra__table-input round">
                       <label class="label__container">
-                        <input type="checkbox" />
+                        <input type="checkbox" class="extra__table-checkbox" name="extra__checkbox"/>
                         <span class="checkmark"></span>
                       </label>
                     </td>
@@ -542,14 +570,14 @@
                     <td class="extra__table-price">1450 руб.</td>
                     <td>
                       <div class="catalog__primary-btn ffOpenSansCond">
-                        <button>ЗАКАЗАТЬ</button>
+                        <button class="extra__table-btn">ДОБАВИТЬ В ЗАКАЗ</button>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td class="extra__table-input round">
                       <label class="label__container">
-                        <input type="checkbox" />
+                        <input type="checkbox" class="extra__table-checkbox" name="extra__checkbox"/>
                         <span class="checkmark"></span>
                       </label>
                     </td>
@@ -557,14 +585,14 @@
                     <td class="extra__table-price">1450 руб.</td>
                     <td>
                       <div class="catalog__primary-btn ffOpenSansCond">
-                        <button>ЗАКАЗАТЬ</button>
+                        <button class="extra__table-btn">ДОБАВИТЬ В ЗАКАЗ</button>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td class="extra__table-input round">
                       <label class="label__container">
-                        <input type="checkbox" />
+                        <input type="checkbox" class="extra__table-checkbox" name="extra__checkbox"/>
                         <span class="checkmark"></span>
                       </label>
                     </td>
@@ -572,7 +600,7 @@
                     <td class="extra__table-price">1450 руб.</td>
                     <td>
                       <div class="catalog__primary-btn ffOpenSansCond">
-                        <button>ЗАКАЗАТЬ</button>
+                        <button class="extra__table-btn">ДОБАВИТЬ В ЗАКАЗ</button>
                       </div>
                     </td>
                   </tr>
@@ -626,10 +654,10 @@
         <div class="tabs">
           <!--  Контейнер с вкладками   -->
           <ul class="tab-header">
-            <li class="tab-header__item js-tab-trigger active" data-tab="1">
+            <li class="tab-header__item js-tab-trigger" data-tab="1">
               Описание
             </li>
-            <li class="tab-header__item js-tab-trigger" data-tab="2">
+            <li class="tab-header__item js-tab-trigger active" data-tab="2">
               Отзывы
               <div class="cart__tabs-feedback">12</div>
             </li>
@@ -640,7 +668,7 @@
 
           <!--  Контейнер с блоками, которые содержат контент вкладок   -->
           <ul class="tab-content">
-            <li class="tab-content__item js-tab-content active" data-tab="1">
+            <li class="tab-content__item js-tab-content" data-tab="1">
               <div class="cart__tabs-item">
                 <div class="cart__tab-info border"></div>
                 <div class="cart__tab-info text">
@@ -769,90 +797,197 @@
                 </div>
               </div>
             </li>
-            <li class="tab-content__item js-tab-content" data-tab="2">
-              <div class="cart__tabs-item">
-                <div class="cart__tab-info border"></div>
-                <div class="cart__tab-info text">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                  </p>
+            <li class="tab-content__item js-tab-content active" data-tab="2">
+              <div class="feedback__box">
+                <div class="swiper-container feedback-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide__p">
+                        <p>
+                          «Уже все соседи на даче обзавелись теплицами из поликарбоната,
+                        очень нахваливают, решили с мужем так же обзавестись ей. Нашли
+                        ваш сайт случайно, понравились цены, позвонили заказали.
+                        Привезли во время, на вид очень крепкая и надежная, работники
+                        доброжелательные и отзывчивые, спасибо! Ждем урожай!»
+                        </p>
+                      </div>
+                      <div class="swiper-slide__dots">
+                        <a href="#">...</a>
+                      </div>
+                      <div class="swiper-slide__h">
+                        <h3>Инна Короткова, Балашиха</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add Pagination -->
+                </div>
+                <!-- Add Arrows -->
+                <div class="arrow arrow-prev feedback-prev">
+                  <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                </div>
+                <div class="arrow arrow-next feedback-next">
+                  <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
                 </div>
               </div>
-              <div class="cart__tabs-item">
-                <div class="cart__tab-info border"></div>
-                <div class="cart__tab-info text">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                  </p>
+              <div class="feedback__btn ffOpenSansCond">
+                <div class="catalog__btn">
+                  <button>СМОТРЕТЬ ВСЕ ОТЗЫВЫ</button>
                 </div>
-              </div>
-              <div class="cart__tabs-item">
-                <div class="cart__tab-info border"></div>
-                <div class="cart__tab-info text">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                  </p>
-                </div>
-              </div>
-              <div class="cart__tabs-item">
-                <div class="cart__tab-info border"></div>
-                <div class="cart__tab-info text">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                  </p>
-                </div>
-              </div>
-              <div class="cart__tabs-item">
-                <div class="cart__tab-info border"></div>
-                <div class="cart__tab-info text">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                  </p>
-                </div>
-              </div>
-              <div class="cart__tabs-item">
-                <div class="cart__tab-info border"></div>
-                <div class="cart__tab-info text">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                  </p>
-                </div>
-              </div>
-              <div class="cart__tabs-item">
-                <div class="cart__tab-info border"></div>
-                <div class="cart__tab-info text">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                  </p>
-                </div>
-              </div>
-              <div class="cart__tabs-item">
-                <div class="cart__tab-info border"></div>
-                <div class="cart__tab-info text">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                  </p>
-                </div>
-              </div>
-              <div class="cart__tabs-item">
-                <div class="cart__tab-info border"></div>
-                <div class="cart__tab-info text">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio reiciendis aspernatur dolorum doloribus rem id.
-                  </p>
+                <div class="catalog__primary-btn">
+                  <button>ЕЩЕ ОТЗЫВЫ</button>
                 </div>
               </div>
             </li>
@@ -1121,7 +1256,11 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.7/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
   <script src="./js/common.js"></script>
+  <script src="./js/feedback.js"></script>
+  <script src="./js/cart.js"></script>
 </body>
 
 </html>
