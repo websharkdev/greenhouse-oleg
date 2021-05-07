@@ -21,6 +21,10 @@
       question: "What is 8*8?",
       choices: [20, 30, 40, 50]
     },
+    {
+      question: "Конец",
+      choices: []
+    },
   ];
 
   var questionCounter = 0; //Tracks question number
