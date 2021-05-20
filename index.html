@@ -2,14 +2,12 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="title" content="matchistik" />
-  <meta name="description" content="123" />
-  <meta name="keywords" content="213" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="English" />
-  <meta name="revisit-after" content="2 days" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content='true' name='HandheldFriendly'/>
+  <meta content='width' name='MobileOptimized'/>
+  <meta content='yes' name='apple-mobile-web-app-capable'/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/quiz.min.css" />
@@ -27,16 +25,9 @@
 
     <div class="header__mobile">
       <div class="header__menu-mobile">
-        <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden">
-        <label for="checkbox4">
-          <div class="hamburger hamburger4">
-            <span class="bar bar1"></span>
-            <span class="bar bar2"></span>
-            <span class="bar bar3"></span>
-            <span class="bar bar4"></span>
-            <span class="bar bar5"></span>
-          </div>
-        </label>
+        <button class="hamburger">
+          <div>1</div><div>1</div><div>1</div>
+        </button>
         <div class="header__menu-contacts ffOpenSansCond">
           <a href="tel:88005559413">8 (800) 555 94 13</a>
         </div>
@@ -187,6 +178,56 @@
   </header>
   <!-- End HEADER -->
 
+  <!-- START MOBILE MENU -->
+  <div class="mobileMenu hide">
+    <div class="mobileMenu__arrow">
+      &#10006;
+    </div>
+
+    <div class="mobileMenu__list">
+      <ul>
+        <li>
+            <a href="#">
+            ТЕПЛИЦА
+          </a>
+        </li>
+        <li>
+            <a href="#">
+            ПОЖИЗННЕННАЯ ГАРАНТИЯ
+          </a>
+        </li>
+        <li>
+            <a href="#">
+            ДОСТАВКА
+          </a>
+        </li>
+        <li>
+            <a href="#">
+            СБОРКА
+          </a>
+        </li>
+        <li>
+            <a href="#">
+            ФУНДАМЕНТ
+          </a>
+        </li>
+        <li>
+            <a href="#">
+            КОНТАКТЫ
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="mobileMenu__phone ffOpenSansCond">
+      <a href="tel:88005559413">8 (800) 555 94 13</a>
+    </div>
+
+  </div>
+  <!-- END MOBILE MENU -->
+
   <!-- START MODAL -->
   <div class="modalQuick hide">
     <div class="modalQuick__arrow">
@@ -320,7 +361,9 @@
     <div class="container">
       <div class="advantages__box advantages__top">
         <div class="advantages__box-item">
-          <img src="./img/icon/advantages/guarantee.png" alt="icon advantages" />
+          <div class="advantages__item-img">
+            <img src="./img/icon/advantages/guarantee.png" alt="icon advantages" />
+          </div>
           <div class="advantages__item-text">
             <p>Мы <span>завод-изготовитель.</span>
               <!-- Мы завод-изготовитель. -->
@@ -333,7 +376,9 @@
         </div>
         <!-- END ADVANTAGES 1 -->
         <div class="advantages__box-item">
-          <img src="./img/icon/advantages/safe.png" alt="icon advantages" />
+          <div class="advantages__item-img">
+            <img src="./img/icon/advantages/safe.png" alt="icon advantages" />
+          </div>
           <div class="advantages__item-text">
             <p>
               Надежная <span>краб-система.</span><br />
@@ -346,7 +391,9 @@
         </div>
         <!-- END ADVANTAGES 2 -->
         <div class="advantages__box-item">
-          <img src="./img/icon/advantages/delivery.png" alt="icon advantages" />
+          <div class="advantages__item-img">
+            <img src="./img/icon/advantages/delivery.png" alt="icon advantages" />
+          </div>
           <div class="advantages__item-text">
             <p>
               <span>Быстрая доставка</span> теплицы до Вас.<br />
@@ -599,10 +646,13 @@
         </div>
 
         <div id="quizContainer" class="ffOpenSansCond">
+          <h2 class="quiz__counter">0</h2>
           <div id="quiz"></div>
-          <div class="QuizButton" id="prev"><a href="#">ПРЕДЫДУЩИЙ ВОПРОС</a></div>
-          <div class="QuizButton" id="next"><a href="#">Следующий вопрос</a></div>
-          <div class="QuizButton" id="start"><a href="#">Начать</a></div>
+          <div class="quiz__btn-box">
+            <div class="QuizButton" id="prev"><a href="#">ПРЕДЫДУЩИЙ ВОПРОС</a></div>
+            <div class="QuizButton" id="next"><a href="#">Следующий вопрос</a></div>
+            <div class="QuizButton" id="start"><a href="#">Начать</a></div>
+          </div>
         </div>
       </div>
     </div>
@@ -613,8 +663,8 @@
     <div class="container">
       <div class="direct__h catalog__h primary-h">
         <div class="dashed-hr"></div>
-        <h2>ТЕПЛИЦЫ АРОЧНЫЕ</h2>
-        <!-- ТЕПЛИЦЫ АРОЧНЫЕ -->
+        <h2>ТЕПЛИЦЫ ПРЯМОСТЕННЫЕ</h2>
+        <!-- ТЕПЛИЦЫ ПРЯМОСТЕННЫЕ -->
         <div class="dashed-hr"></div>
       </div>
       <!-- END H -->
@@ -758,8 +808,8 @@
     <div class="container">
       <div class="blob__h catalog__h primary-h">
         <div class="dashed-hr"></div>
-        <h2>ТЕПЛИЦЫ АРОЧНЫЕ</h2>
-        <!-- ТЕПЛИЦЫ АРОЧНЫЕ -->
+        <h2>ТЕПЛИЦЫ КАПЕЛЬКИ</h2>
+        <!-- ТЕПЛИЦЫ КАПЕЛЬКИ -->
         <div class="dashed-hr"></div>
       </div>
       <!-- END H -->
@@ -863,7 +913,7 @@
         <!-- END ITEM -->
         <div class="blob__box-item blob__stock catalog__box-item" style="
               background: url(./img/catalog/stock.png) center center no-repeat;
-              background-size: 107%;
+              background-size: auto;
             ">
           <div class="blob__item-text ffOpenSansCond">
             <p>
@@ -884,8 +934,8 @@
     <div class="container">
       <div class="garanty__h catalog__h">
         <div class="dashed-hr"></div>
-        <h2>ТЕПЛИЦЫ АРОЧНЫЕ</h2>
-        <!-- ТЕПЛИЦЫ АРОЧНЫЕ -->
+        <h2>ТЕПЛИЦЫ ДОМИК</h2>
+        <!-- ТЕПЛИЦЫ ДОМИК -->
         <div class="dashed-hr"></div>
       </div>
       <!-- END H -->
@@ -1110,8 +1160,8 @@
     <div class="container">
       <div class="mitlider__h catalog__h primary-h">
         <div class="dashed-hr"></div>
-        <h2>ТЕПЛИЦЫ АРОЧНЫЕ</h2>
-        <!-- ТЕПЛИЦЫ АРОЧНЫЕ -->
+        <h2>ТЕПЛИЦЫ МИТЛАЙДЕР</h2>
+        <!-- ТЕПЛИЦЫ МИТЛАЙДЕР -->
         <div class="dashed-hr"></div>
       </div>
       <!-- END H -->
@@ -1268,8 +1318,8 @@
     <div class="container">
       <div class="bed__h catalog__h primary-h">
         <div class="dashed-hr"></div>
-        <h2>ТЕПЛИЦЫ АРОЧНЫЕ</h2>
-        <!-- ТЕПЛИЦЫ АРОЧНЫЕ -->
+        <h2>ГРЯДКИ ДЛЯ ТЕПЛИЦ</h2>
+        <!-- ГРЯДКИ ДЛЯ ТЕПЛИЦ -->
         <div class="dashed-hr"></div>
       </div>
       <!-- END H -->
@@ -1373,7 +1423,7 @@
         <!-- END ITEM -->
         <div class="bed__box-item bed__stock catalog__box-item" style="
               background: url(./img/catalog/bed.png) center center no-repeat;
-              background-size: 110%;
+              background-size: cover;
             ">
           <div class="bed__item-text ffOpenSansCond">
             <p>
@@ -1581,7 +1631,7 @@
         <div class="footer__logo-h">
           <h2>ГОСТ-ТЕПЛИЦА</h2>
         </div>
-        <p>Надежные теплицы от завода изготовителя</p>
+        <p>Надежные теплицы <br/>от завода изготовителя</p>
       </div>
       <!-- END FOOTER LOGO -->
       <div class="footer__wrapper">

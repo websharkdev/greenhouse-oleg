@@ -14,7 +14,14 @@ jQuery(".takeOrder").on("click", function () {
   });
 });
 
-
+jQuery(".hamburger").on("click", function (e) {
+  e.preventDefault();
+  jQuery(".mobileMenu").toggleClass("hide");
+});
+jQuery(".mobileMenu__arrow").on("click", function (e) {
+  e.preventDefault();
+  jQuery(".mobileMenu").toggleClass("hide");
+});
 jQuery("#phone").mask("7-999-999-99-99");
 jQuery(".minicart__input").mask("7-999-999-99-99");
 

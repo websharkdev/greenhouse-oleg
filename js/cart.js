@@ -62,6 +62,7 @@ jsTriggers.forEach(function (trigger) {
 if (screen.width < 560) {
   let items = document.querySelectorAll(".cart__tabs-item");
   let showBTN = document.querySelector(".cart__tabs-mobileBTN");
+  let parentItem = document.querySelector(".tab-content");
   let max = 4;
 
   if (items.length >= max) {
@@ -83,6 +84,7 @@ if (screen.width < 560) {
       item.classList.remove("fade");
     });
     showBTN.classList.toggle("hide");
+    parentItem.classList.add("textVisible");
   });
 }
 // ДОБАВИТЬ В ЗАКАЗ >> добавляем галочку 
@@ -99,6 +101,7 @@ for (let i = 0; i < addOrderBTN.length; i++) {
 var FeedBackSwiperCart = new Swiper(".feedback-container", {
   slidesPerView: 1,
   spaceBetween: 30,
+  loop: true,
   navigation: {
     nextEl: ".arrow-next.feedback-next",
     prevEl: ".arrow-prev.feedback-prev",
@@ -119,9 +122,14 @@ var FeedBackSwiperCart = new Swiper(".feedback-container", {
       slidesPerView: 3,
       spaceBetween: 20,
     },
-    // when window width is >= 520px
-    520: {
+    // when window width is >= 1024px
+    1024: {
       slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
       spaceBetween: 20,
     },
   },

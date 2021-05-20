@@ -2,6 +2,7 @@
 var FeedBackSwiper = new Swiper(".feedback-container", {
   slidesPerView: 1,
   spaceBetween: 30,
+  loop: true,
   navigation: {
     nextEl: ".feedback-next",
     prevEl: ".feedback-prev",
@@ -22,9 +23,14 @@ var FeedBackSwiper = new Swiper(".feedback-container", {
       slidesPerView: 3,
       spaceBetween: 20,
     },
+    // when window width is >= 850px
+    850: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
     // when window width is >= 520px
     520: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20,
     },
   },

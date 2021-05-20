@@ -1,35 +1,60 @@
 // QUIZ
 (function () {
-  var questions = [
+  let questions = [
     {
       question: `КАКОЙ ТИП ТЕПЛИЦЫ ВАМ ПОДОЙДЕТ ЛУЧШЕ?`,
-      choices: [2, 5, 10, 15]
+      choices: [
+        "Ответ первый длинный",
+        "Ответ второй",
+        "Ответ короткий",
+        "Ответ",
+      ],
     },
     {
       question: `Пример вопроса о теплице, например, что будете выращивать?`,
-      choices: [3, 6, 9, 12]
+      choices: [
+        "Ответ первый длинный",
+        "Ответ второй",
+        "Ответ короткий",
+        "Ответ",
+      ],
     },
     {
-      question: "What is 8*9?",
-      choices: [72, 99, 108, 134]
+      question: "Вопрос",
+      choices: [
+        "Ответ первый длинный",
+        "Ответ второй",
+        "Ответ короткий",
+        "Ответ",
+      ],
     },
     {
-      question: "What is 1*7?",
-      choices: [4, 5, 6, 7, 8]
+      question: "Вопрос",
+      choices: [
+        "Ответ первый длинный",
+        "Ответ второй",
+        "Ответ короткий",
+        "Ответ",
+      ],
     },
     {
-      question: "What is 8*8?",
-      choices: [20, 30, 40, 50]
+      question: "Вопрос",
+      choices: [
+        "Ответ первый длинный",
+        "Ответ второй",
+        "Ответ короткий",
+        "Ответ",
+      ],
     },
     {
       question: "Конец",
-      choices: []
+      choices: [],
     },
   ];
 
-  var questionCounter = 0; //Tracks question number
-  var selections = []; //Array containing user choices
-  var quiz = $("#quiz"); //Quiz div object
+  let questionCounter = 0; //Tracks question number
+  let selections = []; //Array containing user choices
+  let quiz = $("#quiz"); //Quiz div object
 
   $(".quizBTN").on("click", function () {
     $(".quiz__box-text").addClass("hide");
@@ -51,7 +76,7 @@
 
     // If no user selection, progress is stopped
     if (isNaN(selections[questionCounter])) {
-      alert("Please make a selection!");
+      alert("Выберете значение");
     } else {
       questionCounter++;
       displayNext();
@@ -94,19 +119,17 @@
   // Creates and returns the div that contains the questions and
   // the answer selections
   function createQuestionElement(index) {
-    var qElement = $("<div>", {
+    let qElement = $("<div>", {
       id: "question",
     });
 
-    var header = $(
-      `<h2> <span>${index + 1}</span> / ${questions.length} </h2>`
-    );
-    qElement.append(header);
+    document.querySelector(".quiz__counter").innerHTML = `<span class="primary">${index + 1}</span>/${
+      questions.length
+    }`;
+
     
     $(".quiz__box-h h2").text(questions[index].question);
-    // var question = $("<p>").append(questions[index].question);
-    // qElement.append(question);
-    var radioButtons = createRadios(index);
+    let radioButtons = createRadios(index);
     qElement.append(radioButtons);
 
     return qElement;
@@ -114,13 +137,13 @@
 
   // Creates a list of the answer choices as radio inputs
   function createRadios(index) {
-    var radioList = $("<ul>");
-    var item;
-    var input = "";
-    for (var i = 0; i < questions[index].choices.length; i++) {
+    let radioList = $("<ul>");
+    let item;
+    let input = "";
+    for (let i = 0; i < questions[index].choices.length; i++) {
       item = $("<li>");
-      input = '<input type="radio" name="answer" value=' + i + " />";
-      input += questions[index].choices[i];
+      input = `<input type="radio" name="answer" id="input__radio${i}" value="${i}"/>`;
+      input += `<label for="input__radio${i}">${questions[index].choices[i]}</label>`;
       item.append(input);
       radioList.append(item);
     }
@@ -138,7 +161,7 @@
       $("#question").remove();
 
       if (questionCounter < questions.length) {
-        var nextQuestion = createQuestionElement(questionCounter);
+        let nextQuestion = createQuestionElement(questionCounter);
         quiz.append(nextQuestion).fadeIn();
         if (!isNaN(selections[questionCounter])) {
           $("input[value=" + selections[questionCounter] + "]").prop(
@@ -155,7 +178,7 @@
           $("#next").css("display", "flex");
         }
       } else {
-        var scoreElem = displayScore();
+        let scoreElem = displayScore();
         quiz.append(scoreElem).fadeIn();
         $("#next").hide();
         $("#prev").hide();
