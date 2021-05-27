@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta content='true' name='HandheldFriendly'/>
-  <meta content='width' name='MobileOptimized'/>
-  <meta content='yes' name='apple-mobile-web-app-capable'/>
+  <meta content='true' name='HandheldFriendly' />
+  <meta content='width' name='MobileOptimized' />
+  <meta content='yes' name='apple-mobile-web-app-capable' />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/catalog.min.css" />
-  <title>Document</title>
+  <title>Каталог</title>
 </head>
 
-<body>
-  <!-- Start HEADER -->
+<body class="catalog__page">
+   <!-- Start HEADER -->
   <header class="header" style="
         background: url(./img/bg/header__bg.png) no-repeat;
         background-position: 35% 0;
@@ -98,6 +98,7 @@
     <!-- END MENU -->
 
     <div class="container header__content">
+      <img src="./img/tomatos.png" class="header__content-bg" alt="tomatos__img">
       <div class="header__content-top header__top">
         <div class="header__top-text">
           <h1 class="ffOpenSansCond">ГОСТ-ТЕПЛИЦА</h1>
@@ -174,6 +175,7 @@
       </div>
       <!-- END header__content-bottom -->
     </div>
+    <img src="./img/header__arch.png" class="header__bg" alt="header__arch-img">
   </header>
   <!-- End HEADER -->
 
@@ -186,32 +188,32 @@
     <div class="mobileMenu__list">
       <ul>
         <li>
-            <a href="#">
+          <a href="#">
             ТЕПЛИЦА
           </a>
         </li>
         <li>
-            <a href="#">
+          <a href="#">
             ПОЖИЗННЕННАЯ ГАРАНТИЯ
           </a>
         </li>
         <li>
-            <a href="#">
+          <a href="#">
             ДОСТАВКА
           </a>
         </li>
         <li>
-            <a href="#">
+          <a href="#">
             СБОРКА
           </a>
         </li>
         <li>
-            <a href="#">
+          <a href="#">
             ФУНДАМЕНТ
           </a>
         </li>
         <li>
-            <a href="#">
+          <a href="#">
             КОНТАКТЫ
           </a>
         </li>
@@ -395,7 +397,7 @@
 
             </div>
           </a>
-  
+
           <a href="#">
             <div class="advantages__box-item advantages__bottom-item">
               <img src="./img/icon/advantages__arch/mitlider.png" alt="icon arch" />
@@ -404,7 +406,7 @@
 
             </div>
           </a>
-  
+
           <a href="#">
             <div class="advantages__box-item advantages__bottom-item">
               <img src="./img/icon/advantages__arch/bed.png" alt="icon arch" />
@@ -435,9 +437,16 @@
       <div class="catalog__box">
         <div class="catalog__sidebar">
           <div class="catalog__sidebar-filter catalog__filter">
+            <div class="catalog__sidebar-top">
+              <div class="catalog__filter-h">
+                <img src="./img/icon/filters__icon.png" alt="filters__icon" class="filter__icon">
+                <h4>Фильтры</h4>
+              </div>
+
+              <button class="catalog__open">Скрыть фильтр</button>
+            </div>
+            <!-- END H -->
             <div class="catalog__filter-settings">
-              <h4>Фильтры</h4>
-              <!-- END H -->
 
               <div class="catalog__filter-price">
                 <h5>Цена</h5>
@@ -466,9 +475,59 @@
                   <option value="Москва">Москва</option>
                 </select>
               </div>
-              <!-- END TYPE -->
             </div>
             <!-- END SETTINGS -->
+
+            <div class="catalog__filter-mobile">
+              <table width="100%" cellpadding="3">
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="catalog__filter-price">
+                        <h5>Цена</h5>
+                        <!-- END H -->
+                        <div class="filter__price">
+                          <div class="filter__price-before">
+                            <h6>от</h6>
+                            <input type="text" placeholder="5 000 p." />
+                          </div>
+                          <!-- END BEFORE -->
+                          <div class="filter__price-after">
+                            <h6>до</h6>
+                            <input type="number" placeholder="315 000 p." max="315000" min="0" />
+                          </div>
+                          <!-- END AFTER -->
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="catalog__filter-type">
+                        <h5>Тип теплицы</h5>
+                        <select name="bed" id="type__bed" size="1">
+                          <option value="Название типа">Название типа</option>
+                          <option value="Москва">Москва</option>
+                          <option value="Тагил">Тагил</option>
+                          <option value="Москва">Москва</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="catalog__filter-type">
+                        <h5>Тип теплицы</h5>
+                        <select name="bed" id="type__bed" size="1">
+                          <option value="Название типа">Название типа</option>
+                          <option value="Москва">Москва</option>
+                          <option value="Тагил">Тагил</option>
+                          <option value="Москва">Москва</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
             <div class="dashed-hr"></div>
             <!-- END HR -->
 
@@ -498,18 +557,18 @@
 
             <div class="dashed-hr"></div>
             <!-- END HR -->
-            <div class="catalog__filter-select">
-              <h5>Название типа</h5>
-              <select name="" id="" size="1">
+            <div class="catalog__filter-select catalog__filter-type catalog__filter-name hideOnTablet">
+              <h5>Тип теплицы</h5>
+              <select name="type" id="type" size="1">
                 <option value="Название типа">Название типа</option>
                 <option value="Москва">Москва</option>
                 <option value="Тагил">Тагил</option>
                 <option value="Москва">Москва</option>
               </select>
             </div>
-            <div class="catalog__filter-select">
+            <div class="catalog__filter-select catalog__filter-type hideOnTablet">
               <h5>Название типа</h5>
-              <select name="" id="" size="1">
+              <select name="name" id="type__name" size="1">
                 <option value="Название типа">Название типа</option>
                 <option value="Москва">Москва</option>
                 <option value="Тагил">Тагил</option>
@@ -527,7 +586,7 @@
             <div class="catalog__add" style="
                   background: url(./img/catalog/bed.png) no-repeat;
                   background-position: center center;
-                  background-size: contain;
+                  background-size: cover;
                 ">
               <div class="catalog__add-text ffOpenSansCond">
                 <p>
@@ -549,7 +608,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -581,7 +640,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -613,7 +672,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -645,7 +704,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -677,7 +736,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -709,7 +768,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -741,7 +800,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -773,7 +832,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -805,7 +864,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -837,7 +896,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -888,7 +947,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -920,7 +979,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -952,7 +1011,7 @@
                 <img src="./img/catalog/arch/arch.png" alt="arch img" />
                 <div class="catalog__item-has">
                   <div class="arrow">
-                    <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                    <img src="./img/icon/checkmark.png" alt="icon arrow" />
                   </div>
                 </div>
               </div>
@@ -1044,7 +1103,7 @@
             <img src="./img/catalog/arch/arch.png" alt="arch img" />
             <div class="catalog__item-has">
               <div class="arrow">
-                <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                <img src="./img/icon/checkmark.png" alt="icon arrow" />
               </div>
             </div>
           </div>
@@ -1076,7 +1135,7 @@
             <img src="./img/catalog/arch/arch.png" alt="arch img" />
             <div class="catalog__item-has">
               <div class="arrow">
-                <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                <img src="./img/icon/checkmark.png" alt="icon arrow" />
               </div>
             </div>
           </div>
@@ -1108,7 +1167,7 @@
             <img src="./img/catalog/arch/arch.png" alt="arch img" />
             <div class="catalog__item-has">
               <div class="arrow">
-                <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                <img src="./img/icon/checkmark.png" alt="icon arrow" />
               </div>
             </div>
           </div>
@@ -1140,7 +1199,7 @@
             <img src="./img/catalog/arch/arch.png" alt="arch img" />
             <div class="catalog__item-has">
               <div class="arrow">
-                <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                <img src="./img/icon/checkmark.png" alt="icon arrow" />
               </div>
             </div>
           </div>
@@ -1188,10 +1247,9 @@
         <!-- END ITEM -->
         <div class="lastseen__box-item lastseen__primary" style="
               background: url(./img/catalog/bed.png) center center no-repeat;
-              background-size: contain;
+              background-size: cover;
             ">
-          <div class="lext ffOpenSansCond"
-          background-position: center center;>
+          <div class="lastseen__primary-text ffOpenSansCond" background-position: center center;>
             <p>
               Мы бесплатно<br />
               <span>отремонтируем теплицу</span>
@@ -1203,10 +1261,9 @@
         <!-- END ITEM -->
         <div class="lastseen__box-item lastseen__primary" style="
               background: url(./img/catalog/bed.png) center center no-repeat;
-              background-size: contain;
+              background-size: cover;
             ">
-          <div class="lext ffOpenSansCond"
-          background-position: center center;>
+          <div class="lastseen__primary-text ffOpenSansCond" background-position: center center;>
             <p>
               Мы бесплатно<br />
               <span>отремонтируем теплицу</span>
@@ -1238,7 +1295,7 @@
             <img src="./img/catalog/arch/arch.png" alt="arch img" />
             <div class="catalog__item-has">
               <div class="arrow">
-                <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                <img src="./img/icon/checkmark.png" alt="icon arrow" />
               </div>
             </div>
           </div>
@@ -1270,7 +1327,7 @@
             <img src="./img/catalog/arch/arch.png" alt="arch img" />
             <div class="catalog__item-has">
               <div class="arrow">
-                <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                <img src="./img/icon/checkmark.png" alt="icon arrow" />
               </div>
             </div>
           </div>
@@ -1302,7 +1359,7 @@
             <img src="./img/catalog/arch/arch.png" alt="arch img" />
             <div class="catalog__item-has">
               <div class="arrow">
-                <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                <img src="./img/icon/checkmark.png" alt="icon arrow" />
               </div>
             </div>
           </div>
@@ -1334,7 +1391,7 @@
             <img src="./img/catalog/arch/arch.png" alt="arch img" />
             <div class="catalog__item-has">
               <div class="arrow">
-                <img src="./img/icon/icon__arrow.png" alt="icon arrow" />
+                <img src="./img/icon/checkmark.png" alt="icon arrow" />
               </div>
             </div>
           </div>
@@ -1395,7 +1452,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
   <script src="./js/common.js"></script>
-  <script src="./js/catalog.js"></script>
 </body>
 
 </html>
