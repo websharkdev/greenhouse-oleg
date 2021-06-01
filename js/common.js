@@ -43,6 +43,16 @@ document.querySelector("#basket").addEventListener("click", (e) => {
 // Проверка на наличие класса у карточки
 
 if (document.querySelector(".cart__page")) {
+
+  const advantagesItems = document.querySelectorAll(
+    ".cart__tabs-advantagesItem"
+  );
+
+  advantagesItems.forEach(item => {
+    item.addEventListener("click", (e) => {
+      item.classList.add("advantagesItem-arrow");
+    })
+  })
   // КАРТОЧКИ СЛАЙДЕР
   var swiper = new Swiper(".gallery-thumbs", {
     slidesPerView: 4,
